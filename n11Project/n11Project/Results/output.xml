@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.2 on win32)" generated="20210119 19:17:36.230">
+<suite id="s1" name="n11TestSuite" source="C:\Users\esra.tarakci\PycharmProjects\pythonProject\Tests\n11TestSuite.robot">
+<test id="s1-t1" name="00. Search Product">
+<kw name="Launch Browser" library="MainFunctions" type="setup">
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>C:\\Users\\esra.tarakci\\PycharmProjects\\pythonProject\\Facilities/../Tests/testresults/${TEST_NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.486" endtime="20210119 19:17:36.486"></status>
+</kw>
+<kw name="Chrome" library="MainFunctions">
+<arguments>
+<arg>${n11_URL}</arg>
+<arg>alias=Main</arg>
+</arguments>
+<kw name="Set Chrome Options" library="MainFunctions">
+<assign>
+<var>${chrome_options}</var>
+</assign>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210119 19:17:36.488" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x03E81D60&gt;</msg>
+<status status="PASS" starttime="20210119 19:17:36.488" endtime="20210119 19:17:36.488"></status>
+</kw>
+<kw name="${option} IN [ @{chrome_arguments} ]" type="for">
+<kw name="${option} = --disable-infobars" type="foritem">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.488" endtime="20210119 19:17:36.488"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.488" endtime="20210119 19:17:36.488"></status>
+</kw>
+<kw name="${option} = --disable-gpu" type="foritem">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.489" endtime="20210119 19:17:36.489"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.488" endtime="20210119 19:17:36.489"></status>
+</kw>
+<kw name="${option} = enable-automation" type="foritem">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.489" endtime="20210119 19:17:36.489"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.489" endtime="20210119 19:17:36.489"></status>
+</kw>
+<kw name="${option} = --no-sandbox" type="foritem">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.489" endtime="20210119 19:17:36.489"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.489" endtime="20210119 19:17:36.489"></status>
+</kw>
+<kw name="${option} = --disable-extensions" type="foritem">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.489" endtime="20210119 19:17:36.490"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.489" endtime="20210119 19:17:36.490"></status>
+</kw>
+<kw name="${option} = --dns-prefetch-disable" type="foritem">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.490" endtime="20210119 19:17:36.490"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.490" endtime="20210119 19:17:36.490"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.488" endtime="20210119 19:17:36.490"></status>
+</kw>
+<msg timestamp="20210119 19:17:36.490" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x03E81D60&gt;</msg>
+<status status="PASS" starttime="20210119 19:17:36.488" endtime="20210119 19:17:36.490"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>--log-level=3</arg>
+</arguments>
+<assign>
+<var>${disableLogging}</var>
+</assign>
+<msg timestamp="20210119 19:17:36.490" level="INFO">${disableLogging} = --log-level=3</msg>
+<status status="PASS" starttime="20210119 19:17:36.490" endtime="20210119 19:17:36.490"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${disableLogging}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:36.490" endtime="20210119 19:17:36.490"></status>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>${alias}</arg>
+<arg>chrome_options=${chrome_options}</arg>
+</arguments>
+<msg timestamp="20210119 19:17:36.491" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210119 19:17:36.490" endtime="20210119 19:17:39.707"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\nCreated WebDriver..</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:39.707" endtime="20210119 19:17:39.707"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>C:\\Users\\esra.tarakci\\PycharmProjects\\pythonProject\\Facilities/../Tests/testresults/${TEST_NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:17:39.707" endtime="20210119 19:17:39.708"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210119 19:17:39.708" level="INFO">Opening url 'https://www.n11.com/'</msg>
+<status status="PASS" starttime="20210119 19:17:39.708" endtime="20210119 19:18:02.736"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210119 19:18:02.736" endtime="20210119 19:18:04.862"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:05.326" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-16.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:04.862" endtime="20210119 19:18:05.326"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.486" endtime="20210119 19:18:05.326"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:17:36.486" endtime="20210119 19:18:05.326"></status>
+</kw>
+<kw name="Search Computer" library="SearchProductFacilities">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210119 19:18:10.328" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210119 19:18:05.327" endtime="20210119 19:18:10.328"></status>
+</kw>
+<kw name="Wait And Click Element" library="MainFunctions">
+<arguments>
+<arg>${closePopupButton}</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:10.342" level="INFO">Current page contains element 'xpath=(//*[@class="closeBtn"])[1]'.</msg>
+<status status="PASS" starttime="20210119 19:18:10.332" endtime="20210119 19:18:10.342"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.331" endtime="20210119 19:18:10.342"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.330" endtime="20210119 19:18:10.342"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:10.343" level="INFO">Clicking element 'xpath=(//*[@class="closeBtn"])[1]'.</msg>
+<status status="PASS" starttime="20210119 19:18:10.342" endtime="20210119 19:18:10.389"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.329" endtime="20210119 19:18:10.389"></status>
+</kw>
+<kw name="Wait And Click Element" library="MainFunctions">
+<arguments>
+<arg>${laterButton}</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:10.400" level="INFO">Current page contains element 'xpath=(//*[text()='Daha Sonra'])[1]'.</msg>
+<status status="PASS" starttime="20210119 19:18:10.390" endtime="20210119 19:18:10.400"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.390" endtime="20210119 19:18:10.400"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.389" endtime="20210119 19:18:10.401"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:10.401" level="INFO">Clicking element 'xpath=(//*[text()='Daha Sonra'])[1]'.</msg>
+<status status="PASS" starttime="20210119 19:18:10.401" endtime="20210119 19:18:10.442"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.389" endtime="20210119 19:18:10.442"></status>
+</kw>
+<kw name="Wait And Click Element" library="MainFunctions">
+<arguments>
+<arg>${searchInputBox}</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:10.453" level="INFO">Current page contains element 'xpath=//*[@id="searchData"]'.</msg>
+<status status="PASS" starttime="20210119 19:18:10.444" endtime="20210119 19:18:10.453"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.443" endtime="20210119 19:18:10.453"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.443" endtime="20210119 19:18:10.453"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:10.454" level="INFO">Clicking element 'xpath=//*[@id="searchData"]'.</msg>
+<status status="PASS" starttime="20210119 19:18:10.454" endtime="20210119 19:18:11.048"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:10.443" endtime="20210119 19:18:11.048"></status>
+</kw>
+<kw name="Wait And Send Text" library="MainFunctions">
+<arguments>
+<arg>${searchInputBox}</arg>
+<arg>bilgisayar</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:11.054" level="INFO">Current page contains element 'xpath=//*[@id="searchData"]'.</msg>
+<status status="PASS" starttime="20210119 19:18:11.049" endtime="20210119 19:18:11.054"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:11.049" endtime="20210119 19:18:11.054"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:11.049" endtime="20210119 19:18:11.054"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:11.055" level="INFO">Typing text 'bilgisayar' into text field 'xpath=//*[@id="searchData"]'.</msg>
+<status status="PASS" starttime="20210119 19:18:11.055" endtime="20210119 19:18:11.098"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:11.048" endtime="20210119 19:18:11.098"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${searchInputBox}</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20210119 19:18:11.099" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[@id="searchData"] element.</msg>
+<msg timestamp="20210119 19:18:11.381" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210119 19:18:11.381" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210119 19:18:11.098" endtime="20210119 19:18:12.208"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210119 19:18:15.210" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210119 19:18:12.208" endtime="20210119 19:18:15.210"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:05.326" endtime="20210119 19:18:15.211"></status>
+</kw>
+<kw name="Select First Product" library="SearchProductFacilities">
+<kw name="Wait And Click Element" library="MainFunctions">
+<arguments>
+<arg>${firstProduct}</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:15.245" level="INFO">Current page contains element 'xpath=//*[text()='Kategori seçiniz']/following::img[1]'.</msg>
+<status status="PASS" starttime="20210119 19:18:15.218" endtime="20210119 19:18:15.245"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:15.217" endtime="20210119 19:18:15.245"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:15.215" endtime="20210119 19:18:15.245"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:15.246" level="INFO">Clicking element 'xpath=//*[text()='Kategori seçiniz']/following::img[1]'.</msg>
+<status status="PASS" starttime="20210119 19:18:15.246" endtime="20210119 19:18:15.335"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:15.213" endtime="20210119 19:18:15.335"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210119 19:18:17.336" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210119 19:18:15.335" endtime="20210119 19:18:17.336"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:15.212" endtime="20210119 19:18:17.336"></status>
+</kw>
+<kw name="Get Price Value" library="SearchProductFacilities">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${priceText}</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${priceValue}</var>
+</assign>
+<msg timestamp="20210119 19:18:17.518" level="INFO">${priceValue} = 1,513.99</msg>
+<status status="PASS" starttime="20210119 19:18:17.336" endtime="20210119 19:18:17.518"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\nPrice: ${priceValue}</arg>
+</arguments>
+<status status="PASS" starttime="20210119 19:18:17.518" endtime="20210119 19:18:17.519"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${priceValue}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:17.519" level="INFO">${priceValue} = 1,513.99</msg>
+<status status="PASS" starttime="20210119 19:18:17.519" endtime="20210119 19:18:17.519"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:17.336" endtime="20210119 19:18:17.519"></status>
+</kw>
+<kw name="Add Basket" library="BasketFacilities">
+<kw name="Wait And Click Element" library="MainFunctions">
+<arguments>
+<arg>${addBasketButton}</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:17.538" level="INFO">Current page contains element 'xpath=//*[text()='Sepete Ekle']'.</msg>
+<status status="PASS" starttime="20210119 19:18:17.520" endtime="20210119 19:18:17.538"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:17.520" endtime="20210119 19:18:17.538"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:17.520" endtime="20210119 19:18:17.538"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:17.539" level="INFO">Clicking element 'xpath=//*[text()='Sepete Ekle']'.</msg>
+<status status="PASS" starttime="20210119 19:18:17.538" endtime="20210119 19:18:17.638"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:17.520" endtime="20210119 19:18:17.638"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210119 19:18:18.640" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210119 19:18:17.639" endtime="20210119 19:18:18.640"></status>
+</kw>
+<kw name="Wait And Click Element" library="MainFunctions">
+<arguments>
+<arg>${goToBasket}</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:18.651" level="INFO">Current page contains element 'xpath=//*[text()='Sepete Git']'.</msg>
+<status status="PASS" starttime="20210119 19:18:18.641" endtime="20210119 19:18:18.651"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:18.640" endtime="20210119 19:18:18.651"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:18.640" endtime="20210119 19:18:18.651"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210119 19:18:18.651" level="INFO">Clicking element 'xpath=//*[text()='Sepete Git']'.</msg>
+<status status="PASS" starttime="20210119 19:18:18.651" endtime="20210119 19:18:19.269"></status>
+</kw>
+<status status="PASS" starttime="20210119 19:18:18.640" endtime="20210119 19:18:19.269"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210119 19:18:20.272" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210119 19:18:19.269" endtime="20210119 19:18:20.272"></status>
+</kw>
+<kw name="Wait And Click Element" library="MainFunctions">
+<arguments>
+<arg>${closePopupButton}</arg>
+</arguments>
+<kw name="Wait For Element" library="MainFunctions">
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${timeout}</arg>
+<arg>${interval}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:20.923" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-17.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:20.416" endtime="20210119 19:18:20.923"></status>
+</kw>
+<msg timestamp="20210119 19:18:20.927" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:20.274" endtime="20210119 19:18:20.927"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:22.249" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-18.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:21.948" endtime="20210119 19:18:22.249"></status>
+</kw>
+<msg timestamp="20210119 19:18:22.250" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:21.928" endtime="20210119 19:18:22.250"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:23.590" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-19.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:23.270" endtime="20210119 19:18:23.590"></status>
+</kw>
+<msg timestamp="20210119 19:18:23.591" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:23.252" endtime="20210119 19:18:23.591"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:24.936" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-20.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:24.610" endtime="20210119 19:18:24.936"></status>
+</kw>
+<msg timestamp="20210119 19:18:24.937" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:24.592" endtime="20210119 19:18:24.937"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:26.282" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-21.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:25.955" endtime="20210119 19:18:26.282"></status>
+</kw>
+<msg timestamp="20210119 19:18:26.283" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:25.938" endtime="20210119 19:18:26.284"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:27.640" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-22.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:27.329" endtime="20210119 19:18:27.640"></status>
+</kw>
+<msg timestamp="20210119 19:18:27.641" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:27.286" endtime="20210119 19:18:27.641"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:28.981" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-23.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:28.662" endtime="20210119 19:18:28.981"></status>
+</kw>
+<msg timestamp="20210119 19:18:28.982" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:28.642" endtime="20210119 19:18:28.982"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:30.324" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-24.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:30.008" endtime="20210119 19:18:30.324"></status>
+</kw>
+<msg timestamp="20210119 19:18:30.325" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:29.983" endtime="20210119 19:18:30.325"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:31.654" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-25.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:31.342" endtime="20210119 19:18:31.654"></status>
+</kw>
+<msg timestamp="20210119 19:18:31.655" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:31.325" endtime="20210119 19:18:31.655"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:33.007" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-26.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:32.674" endtime="20210119 19:18:33.007"></status>
+</kw>
+<msg timestamp="20210119 19:18:33.008" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:32.657" endtime="20210119 19:18:33.008"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:34.344" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-27.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:34.026" endtime="20210119 19:18:34.345"></status>
+</kw>
+<msg timestamp="20210119 19:18:34.346" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:34.009" endtime="20210119 19:18:34.346"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:35.726" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-28.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:35.368" endtime="20210119 19:18:35.726"></status>
+</kw>
+<msg timestamp="20210119 19:18:35.728" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:35.347" endtime="20210119 19:18:35.728"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:37.055" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-29.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:36.745" endtime="20210119 19:18:37.055"></status>
+</kw>
+<msg timestamp="20210119 19:18:37.056" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:36.728" endtime="20210119 19:18:37.056"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:38.393" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-30.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:38.074" endtime="20210119 19:18:38.393"></status>
+</kw>
+<msg timestamp="20210119 19:18:38.395" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:38.057" endtime="20210119 19:18:38.395"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:39.750" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-31.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:39.432" endtime="20210119 19:18:39.750"></status>
+</kw>
+<msg timestamp="20210119 19:18:39.751" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:39.395" endtime="20210119 19:18:39.751"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:41.093" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-32.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:40.772" endtime="20210119 19:18:41.093"></status>
+</kw>
+<msg timestamp="20210119 19:18:41.095" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:40.752" endtime="20210119 19:18:41.095"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:42.441" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-33.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:42.116" endtime="20210119 19:18:42.441"></status>
+</kw>
+<msg timestamp="20210119 19:18:42.442" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:42.096" endtime="20210119 19:18:42.442"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:43.804" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-34.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:43.463" endtime="20210119 19:18:43.804"></status>
+</kw>
+<msg timestamp="20210119 19:18:43.806" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:43.443" endtime="20210119 19:18:43.806"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:45.221" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-35.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:44.829" endtime="20210119 19:18:45.221"></status>
+</kw>
+<msg timestamp="20210119 19:18:45.223" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:44.808" endtime="20210119 19:18:45.223"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:46.646" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-36.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:46.247" endtime="20210119 19:18:46.646"></status>
+</kw>
+<msg timestamp="20210119 19:18:46.649" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:46.223" endtime="20210119 19:18:46.649"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:48.016" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-37.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:47.678" endtime="20210119 19:18:48.016"></status>
+</kw>
+<msg timestamp="20210119 19:18:48.018" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:47.649" endtime="20210119 19:18:48.018"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:49.370" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-38.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:49.039" endtime="20210119 19:18:49.371"></status>
+</kw>
+<msg timestamp="20210119 19:18:49.372" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:49.020" endtime="20210119 19:18:49.372"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:50.739" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-39.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:50.407" endtime="20210119 19:18:50.739"></status>
+</kw>
+<msg timestamp="20210119 19:18:50.742" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:50.374" endtime="20210119 19:18:50.742"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:52.102" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-40.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:51.760" endtime="20210119 19:18:52.102"></status>
+</kw>
+<msg timestamp="20210119 19:18:52.103" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:51.743" endtime="20210119 19:18:52.103"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:53.457" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-41.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:53.140" endtime="20210119 19:18:53.457"></status>
+</kw>
+<msg timestamp="20210119 19:18:53.458" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:53.105" endtime="20210119 19:18:53.458"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:54.843" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-42.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:54.482" endtime="20210119 19:18:54.843"></status>
+</kw>
+<msg timestamp="20210119 19:18:54.844" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:54.460" endtime="20210119 19:18:54.845"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:56.216" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-43.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:55.864" endtime="20210119 19:18:56.216"></status>
+</kw>
+<msg timestamp="20210119 19:18:56.218" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:55.846" endtime="20210119 19:18:56.218"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:57.592" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-44.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:57.254" endtime="20210119 19:18:57.593"></status>
+</kw>
+<msg timestamp="20210119 19:18:57.594" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:57.218" endtime="20210119 19:18:57.594"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:18:58.949" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-45.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:58.615" endtime="20210119 19:18:58.949"></status>
+</kw>
+<msg timestamp="20210119 19:18:58.951" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:58.595" endtime="20210119 19:18:58.951"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:00.300" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-46.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-46.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:18:59.973" endtime="20210119 19:19:00.301"></status>
+</kw>
+<msg timestamp="20210119 19:19:00.303" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:18:59.951" endtime="20210119 19:19:00.303"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:01.694" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-47.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:01.344" endtime="20210119 19:19:01.694"></status>
+</kw>
+<msg timestamp="20210119 19:19:01.695" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:01.303" endtime="20210119 19:19:01.695"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:03.041" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-48.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:02.715" endtime="20210119 19:19:03.041"></status>
+</kw>
+<msg timestamp="20210119 19:19:03.042" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:02.696" endtime="20210119 19:19:03.042"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:04.398" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-49.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:04.063" endtime="20210119 19:19:04.398"></status>
+</kw>
+<msg timestamp="20210119 19:19:04.399" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:04.044" endtime="20210119 19:19:04.399"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:05.752" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-50.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:05.421" endtime="20210119 19:19:05.752"></status>
+</kw>
+<msg timestamp="20210119 19:19:05.753" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:05.401" endtime="20210119 19:19:05.753"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:07.091" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-51.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:06.770" endtime="20210119 19:19:07.091"></status>
+</kw>
+<msg timestamp="20210119 19:19:07.092" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:06.754" endtime="20210119 19:19:07.092"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:08.455" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-52.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-52.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:08.123" endtime="20210119 19:19:08.455"></status>
+</kw>
+<msg timestamp="20210119 19:19:08.457" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:08.093" endtime="20210119 19:19:08.457"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:09.818" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-53.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-53.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:09.477" endtime="20210119 19:19:09.818"></status>
+</kw>
+<msg timestamp="20210119 19:19:09.819" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:09.458" endtime="20210119 19:19:09.819"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:11.162" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-54.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:10.838" endtime="20210119 19:19:11.162"></status>
+</kw>
+<msg timestamp="20210119 19:19:11.163" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:10.819" endtime="20210119 19:19:11.163"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:12.523" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-55.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:12.182" endtime="20210119 19:19:12.523"></status>
+</kw>
+<msg timestamp="20210119 19:19:12.524" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:12.164" endtime="20210119 19:19:12.524"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:13.872" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-56.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:13.543" endtime="20210119 19:19:13.872"></status>
+</kw>
+<msg timestamp="20210119 19:19:13.873" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:13.525" endtime="20210119 19:19:13.873"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210119 19:19:15.217" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-57.png"&gt;&lt;img src="../Tests/testresults/00.%20Search%20Product/selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210119 19:19:14.899" endtime="20210119 19:19:15.217"></status>
+</kw>
+<msg timestamp="20210119 19:19:15.218" level="FAIL">Page should have contained element 'xpath=(//*[@class="closeBtn"])[1]' but did not.</msg>
+<status status="FAIL" starttime="20210119 19:19:14.874" endtime="20210119 19:19:15.218"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
