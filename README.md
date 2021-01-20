@@ -14,4 +14,4 @@ Test case stepleri:
 
 5. Ürünü sepetten sil 
 
-6.Sepetiniz Boş yazısını kontrol et
+6. Sepetiniz Boş yazısını kontrol et
